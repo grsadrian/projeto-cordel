@@ -4,10 +4,19 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Sriracha&display=swap");
 
+/* Criando variáveis ↓*/
+
 :root {
   --fonte-autor: "Passion One", sans-serif;
   --fonte-poema: "Sriracha", cursive;
   --fonte-padrao: "Verdana", "Geneva", "Tahoma", sans-serif;
+}
+
+html,
+body {
+  /* Altura mínima da página vai ser 100% do viewport height */
+  min-height: 100vh;
+  background-color: darkgray;
 }
 
 * {
@@ -27,9 +36,10 @@ header {
 
 header > h1 {
   font-family: var(--fonte-autor);
+  /* Deixa todas as letras maiúsculas, mas tem as primeiras letras maiores */
   font-variant: small-caps;
   font-size: 10vw;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 header > p {
@@ -38,19 +48,20 @@ header > p {
   padding-bottom: 50px;
 }
 
-header > p > a {
+a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
-header > p > a:hover {
+a:hover {
   text-decoration: underline;
 }
 
 section {
   font-family: var(--fonte-poema);
   font-size: 3.5vw;
+  /* O vh basicamente é a porcentagem do tamanho da tela */
   padding: 10vh 0px 10vh 30px;
 }
 
@@ -86,14 +97,4 @@ footer {
   color: white;
   font-family: var(--fonte-padrao);
   padding: 10px;
-}
-
-footer a {
-  text-decoration: none;
-  font-weight: bold;
-  color: white;
-}
-
-footer a:hover {
-  text-decoration: underline;
 }
