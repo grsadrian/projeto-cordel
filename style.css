@@ -17,15 +17,13 @@ body {
   /* Altura mínima da página vai ser 100% do viewport height */
   min-height: 100vh;
   background-color: darkgray;
+  font-family: var(--fonte-padrao);
 }
 
 * {
+  font-size: 1em;
   margin: 0px;
   padding: 0px;
-}
-
-body {
-  font-size: 1em;
 }
 
 header {
@@ -38,6 +36,7 @@ header > h1 {
   font-family: var(--fonte-autor);
   /* Deixa todas as letras maiúsculas, mas tem as primeiras letras maiores */
   font-variant: small-caps;
+  /* Essa configuração de vw torna o tamanho da fonte variável, ela vai ser do tamanho de 10% da largura da tela. Se a tela for menor, consequentemente ela também será menor e a mesma coisa se a tela for maior. */
   font-size: 10vw;
   padding-top: 50px;
 }
@@ -69,9 +68,16 @@ section > p {
   padding-bottom: 2em;
 }
 
+section.imagem {
+  box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 section.imagem > p {
+  /* Essa configuração de display faz com que a caixa do parágrafo ocupe somente o tamanho do conteúdo. Isto é, apenas o tamanho do que está escrito lá. */
   display: inline-block;
-  background-color: rgba(0, 0, 0, 0.318);
+  background-color: rgba(0, 0, 0, 0.521);
   color: white;
   padding: 5px;
   text-shadow: 1px 1px 0px black;
@@ -79,16 +85,12 @@ section.imagem > p {
 
 section.imagem#img01 {
   background-image: url(imagens/background001.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: right top;
+  background-position: right center;
 }
 
 section.imagem#img02 {
   background-image: url(imagens/background002.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: right top;
+  background-position: right center;
 }
 
 footer {
